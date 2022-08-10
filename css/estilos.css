@@ -12,15 +12,15 @@
 /* INDEX */
 
 * {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
 .logo {
     width: 8%;
-    position: relative;
-    left: 90%;
+    margin: 0;
+    right: 0;
 }
 
 .tituloIndex {
@@ -28,12 +28,8 @@
     font-family: 'Splash', cursive;
     color: rgb(80, 76, 43);
     font-size: xx-large;
-    text-align: start;
-    display: inline-block;
-    position: relative;
-    bottom: 3rem;
-    left: 15rem;
-    align-items: center;
+    text-align: left;
+   
 
 }
 
@@ -47,24 +43,6 @@
     align-items: center;
 }
 
-.cabeceraLIINDEX {
-
-    display: inline-block;
-    padding: 1rem;
-    position: relative;
-
-}
-
-.cabeceraLinkINDEX {
-    font-size: x-large;
-    text-transform: uppercase;
-    color: rgb(198, 198, 198);
-    font-weight: bolder;
-    text-decoration: none;
-    background-color: rgb(49, 46, 129);
-    border: 1px rgb(132, 153, 202) solid;
-
-}
 
 .cuerpoIndex {
 
@@ -72,43 +50,34 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    height: 100vh;
-
+    
+margin: 0;
+padding: 0;
 }
 
-.grid-principalIndex {
+.row {
 
-    display: grid;
-    grid-template-columns: 100px 100px;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 20px;
-    grid-template-areas: "textoB fotoB";
     width: 90%;
-    margin: 0 auto
+    margin: 0 0
 }
 
-.grid-Texto {
-    grid-area: textoB;
+.pieIndex {
+    background-color: rgba(255, 235, 205, 0.655);
+    margin: 0;
+    padding: 0;
 }
 
-.grid-Foto {
-    grid-area: fotoB;
-    width: 310px;
-    height: 390px;
-}
 
-.flex-internoTexto {
 
-    display: flex;
-    flex-direction: column;
-    padding: 1.25rem;
+.Presentacion {
+
     text-align: center;
     align-items: center;
     justify-content: center;
     width: 310px;
     height: 390px;
     border: solid 0, 5px rgb(179, 151, 126);
-    background-color: peachpuff;
+    background-color: rgba(255, 218, 185, 0.381);
     font-family: 'Edu NSW ACT Foundation', cursive;
     font-size: large;
     font-style: oblique;
@@ -117,50 +86,15 @@
     color: rgb(92, 71, 22);
 }
 
-@media screen and (max-width: 768px) {
-
-    .cabeceraMenuUl {
-        width: 74vw;
-    }
-
-
-    .grid-principalIndex {
-        grid-template-areas: "textoB""fotoB";
-        width: 74vw;
-        grid-template-columns: 15rem 15rem;
-    }
-
-    .grid-Lugares h2 {
-        color: rgb(8, 8, 8);
-    }
-
-
+.imagen  {
+    width: 400px;
+    height: 390px;
 }
 
-@media screen and (max-width: 567px) {
-    .grid-Lugares {
-        grid-template-areas: "PDD""CP""LP""AD";
-        width: 70vw;
-        grid-template-columns: 23rem;
-    }
 
-    .grid-Lugares h2 {
-        color: rgb(15, 12, 12);
-    }
 
-}
 
-.pieIndex {
-    display: grid;
-    grid-template-columns: 30% 30%;
-    grid-template-rows: repeat(2, 1fr);
-    column-gap: 40%;
-    grid-template-areas: "textoB""fotoB";
-    margin: 0;
-    background-color: midnightblue;
-    grid-template-columns: repeat(3, auto);
-    justify-items: center;
-}
+
 
 /*MEDIA INDEX */
 
@@ -239,10 +173,10 @@
 .titulo2 {
 
     font-family: 'Edu QLD Beginner', cursive;
-    color: rgb(37, 115, 231);
+    color: rgb(12, 35, 69);
     font-size: medium;
     text-align: center;
-    display: flex bottom: 3rem;
+  
     left: 30rem;
     justify-content: flex-start;
     align-items: center;
@@ -282,9 +216,10 @@
     flex-direction: column;
     padding: 1.25rem;
     text-align: center;
-    background-color: aliceblue;
+    background-color: rgba(15, 255, 255, 0.782);
     align-items: center;
     justify-content: center;
+    color: rgb(15, 86, 86);
 }
 
 .flex-internoL p {
@@ -414,14 +349,17 @@
 .tituloImperdible {
     font-family: 'Splash', cursive;
     color: rgb(240, 149, 21);
-    font-size: xx-large;
+
+}
+
+.titulo2imperdible{
+    
+    font-family: 'Edu QLD Beginner', cursive;
+    color: rgb(173, 231, 37);
+    font-size: medium;
     text-align: center;
-    display: inline-block;
-    position: relative;
-    bottom: 3rem;
-    left: 30rem;
-    justify-content: flex-start;
-    align-items: center;
+   
+
 }
 
 .CuerpoImperdible {
@@ -464,7 +402,9 @@
     flex-direction: column;
     padding: 1.25rem;
     text-align: center;
-    background-color: aliceblue;
+    color: rgb(248, 251, 250);
+    
+    background-color: rgba(13, 68, 116, 0.785);
     align-items: center;
     justify-content: center;
 }
@@ -500,7 +440,7 @@
     }
 
     .grid-imperdibles h2 {
-        color: red;
+        color: rgb(230, 220, 220);
     }
 }
 
@@ -552,13 +492,15 @@
     font-family: 'Splash', cursive;
     color: rgb(75, 76, 97);
     font-size: xx-large;
+
+
+}
+
+.titulo2actividades {
+    font-family: 'Edu QLD Beginner', cursive;
+    color: rgba(48, 48, 49, 0.986);
+    font-size: medium;
     text-align: center;
-    display: inline-block;
-    position: relative;
-    bottom: 3rem;
-    left: 30rem;
-    justify-content: flex-start;
-    align-items: center;
 
 }
 
@@ -598,9 +540,11 @@
     flex-direction: column;
     padding: 1.25rem;
     text-align: center;
-    background-color: aliceblue;
+    color: rgb(37, 70, 70);
+    background-color: rgba(28, 155, 198, 0.434);
     align-items: center;
     justify-content: center;
+    
 }
 
 .flex-internoA p {
@@ -690,7 +634,17 @@
     padding: 0;
     margin: 0;
 }
-
+.titulocontacto2
+{font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(239, 216, 216);
+    font-size: xx-large;
+    text-align: center;
+    display: inline-block;
+    position: relative;
+    bottom: 3rem;
+    left: 30rem;
+    justify-content: flex-start;
+    align-items: center;}
 .titulo {
     margin: 0;
     padding: 0;
@@ -709,38 +663,29 @@
 .principal {
     background-image: url(../img/Palmares.jpg);
     background-repeat: no-repeat;
-    background-position: center;
     background-size: cover;
+    margin: 0;
+    padding: 0;
 }
 
 .pieContacto {
 
-    display: grid;
-    grid-template-columns: 30% 30%;
-    grid-template-rows: repeat(2, 1fr);
-    column-gap: 40%;
-    grid-template-areas: "textoB""fotoB";
-    margin: 0;
+
     background-color: midnightblue;
-
-
-    grid-template-columns: repeat(3, auto);
-    justify-items: center;
 }
 
-.formulario {
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
 
-.titulo2 {
-    color: rgb(8, 36, 60);
-}
 
-.mail {
+
+
+.titulo2contacto {
+    font-family: 'Edu QLD Beginner', cursive;
+    color: rgba(48, 48, 49, 0.986);
+    font-size: medium;
+    text-align: center;}
+
+.form-label {
     background-color: aqua;
     font-family: 'Edu NSW ACT Foundation', cursive;
     ;
@@ -757,4 +702,11 @@
     box-sizing: border-box;
     color: rgb(8, 36, 60);
 
+}
+
+.btn {
+    right: 0%;
+}
+.videoYT {
+    right: 0%;
 }
