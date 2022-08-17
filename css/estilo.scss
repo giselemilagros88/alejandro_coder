@@ -1,0 +1,71 @@
+@import "./variables/variable" ;
+
+/* INDEX 10 */
+
+
+/* INDEX */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.body {
+    background-image: url(../img/ArenaAgua.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    .header {
+        .tituloIndex {
+           
+            font-family: $fuenteTitulos;
+            font-size: $tamanoTitulos;
+            text-align: left;
+            color:$marron;
+        }
+
+        .nav {
+            .a {
+                .logo {
+                    width: 8%;
+                    margin: 0;
+                    right: 0;
+                }
+            }
+        }
+    }
+
+    .main {
+        .div {
+            .Presentacion {
+                text-align: center;
+                align-items: center;
+                justify-content: center;
+                width: 310px;
+                height: $AltoPresentacion;
+                border: solid 0, 5px rgb(179, 151, 126);
+                background-color: rgba(255, 218, 185, 0.381);
+                font-family: $fuenteTexto;
+                font-size: large;
+                font-style: oblique;
+                font-weight: bolder;
+                text-align: center;
+                color: $colorTextoIndex;
+            }
+        }
+        .div {
+            .imagen {
+                width: 400px;
+                height: $AltoPresentacion;
+            }
+        }
+    }
+
+    .pieIndex {
+        background-color: rgba(255, 235, 205, 0.655);
+        margin: 0;
+        padding: 0;
+    }
+}

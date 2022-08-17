@@ -1,0 +1,39 @@
+/*ACTIVIDADES QUERI*/
+
+@media screen and (max-width: 768px) {
+    .grid-Lugares {
+        grid-template-areas: "PDD""CP""LP""AD";
+        width: 74vw;
+        grid-template-columns: 15rem 15rem;
+    }
+
+    .grid-Lugares h2 {
+        color: rgb(8, 8, 8);
+    }
+
+}
+
+@media screen and (max-width: 567px) {
+    .grid-Lugares {
+        grid-template-areas: "PDD""CP""LP""AD";
+        width: 70vw;
+        grid-template-columns: 23rem;
+    }
+
+    .grid-Lugares h2 {
+        color: rgb(15, 12, 12);
+    }
+
+    .cabeceraMenuUl {
+        width: 50vw;
+    }
+
+    .cabeceraLI {
+        width: 50vw;
+    }
+
+    .cabeceraLink {
+        width: 50vw;
+
+    }
+}
