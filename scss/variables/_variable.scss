@@ -1,6 +1,5 @@
 /*Colores*/
 
-
 $ColorPie:  rgba(255, 235, 205, 0.655);
 $BordeArena:  rgb(179, 151, 126);
 $ArenaTransparente:  rgba(255, 218, 185, 0.381);
@@ -9,10 +8,15 @@ $marron: rgb(80, 76, 43);
 
 /*Medidas*/
 
-$AltoPresentacion: 390px;
+$AltoPresentacion: 500px;
 
-/*fuentes*/
+/* Fuentes*/
+
 $fuenteTitulos:'Splash', cursive;
 $fuenteTexto: 'Edu NSW ACT Foundation', cursive;
-
 $tamanoTitulos: xx-large;
+
+/*Mapa de Variables*/
+$ColoresBase: (
+    Index: rgba(255, 218, 185, 0.651)
+)

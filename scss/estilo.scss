@@ -1,12 +1,15 @@
 @import "./variables/variable";
 @import "./variables/mediaquerie";
+@import "./variables/mixins.scss";
 @import url('https://fonts.googleapis.com/css2?family=Splash&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation&display=swap');
 
 
-
 /* INDEX 10 */
-/*LUGARES 78 */
+/* LUGARES 83 */
+/* IMPERDIBLE 223 */
+/* ACTIVIDADES 369 */
+/* CONTACTO 525 */
 
 
 /* INDEX */
@@ -22,6 +25,8 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    margin: 100;
+    padding: 100;
 
     header {
         .tituloIndex {
@@ -29,7 +34,7 @@
             font-family: $fuenteTitulos;
             font-size: $tamanoTitulos;
             text-align: left;
-            color: $marron;
+            @include ColorTitulos (Index);
         }
 
         nav {
@@ -52,7 +57,7 @@
                 width: 310px;
                 height: $AltoPresentacion;
                 border: solid 0, 5px rgb(179, 151, 126);
-                background-color: rgba(255, 218, 185, 0.651);
+                background-color: map-get($ColoresBase, Index);
                 font-family: $fuenteTexto;
                 font-size: 15;
                 font-style: oblique;
@@ -64,14 +69,14 @@
 
         div {
             .imagen {
-                width: 400px;
-                height: $AltoPresentacion;
+                width: 400px*2;
+                height: $AltoPresentacion*1, 2;
             }
         }
     }
 
     .pieIndex {
-        background-color: rgba(255, 235, 205, 0.655);
+        background-color: map-get($ColoresBase, Index);
         margin: 0;
         padding: 0;
     }
@@ -79,46 +84,20 @@
 
 /* LUGARES */
 
-* {
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
+.tituloLugares {
+    @include ColorTitulos (Lugares);
+    font-family: $fuenteTitulos;
+    font-size: $tamanoTitulos;
+    text-align: left;
 }
 
-
 .cuerpoLugares {
-
     background-image: url(../img/SantaTereza.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     margin: 100;
     padding: 100;
-
-    header {
-        h1 {
-
-            font-family: 'Splash', cursive;
-            color: rgb(16, 23, 114);
-            font-size: xx-large;
-            text-align: center;
-            display: inline-block;
-            position: static;
-            bottom: 3rem;
-            left: 30rem;
-            justify-content: flex-start;
-            align-items: center;
-
-            a img {
-                width: 8%;
-                position: relative;
-                left: 90%;
-            }
-        }
-
-    }
-
-
     .PrincipalLugares {
         h2 {
             font-family: 'Edu QLD Beginner', cursive;
@@ -129,8 +108,6 @@
             justify-content: flex-start;
             align-items: center;
         }
-
-
         .grid-Lugares {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -139,8 +116,6 @@
             grid-template-areas: "PDD CP LP AD ";
             width: 90%;
             margin: 0 auto;
-
-
             .grid-PuntaDelDiablo {
                 grid-area: PDD;
                 display: flex;
@@ -152,74 +127,44 @@
                 justify-content: center;
                 color: rgb(15, 86, 86);
             }
-            
-
             .flex-internoL {
                 padding: 0.75rem;
                 height: 30rem;
             }
-
             .foto1 {
                 size: 5cm;
                 height: 5cm;
                 width: 9cm;
                 width: 100%;
                 object-fit: cover;
-
                 .flex-internoL img {
                     width: 100%;
                     object-fit: cover;
                 }
             }
-
-
             .grid-CaboPolonio {
+                @extend .grid-PuntaDelDiablo;
                 grid-area: CP;
-                display: flex;
-                flex-direction: column;
-                padding: 1.25rem;
-                text-align: center;
-                background-color: rgba(15, 255, 255, 0.782);
-                align-items: center;
-                justify-content: center;
-                color: rgb(15, 86, 86);
             }
-
             .flex-internoL {
                 padding: 0.75rem;
                 height: 30rem;
             }
-
             .foto2 {
                 size: 5cm;
                 height: 5cm;
                 width: 9cm;
                 width: 100%;
                 object-fit: cover;
-
                 .flex-internoL {
                     width: 100%;
                     object-fit: cover;
                 }
             }
-
-
-
             .grid-LaPaloma {
                 grid-area: LP;
-                display: flex;
-                flex-direction: column;
-                padding: 1.25rem;
-                text-align: center;
-                background-color: rgba(15, 255, 255, 0.782);
-                align-items: center;
-                justify-content: center;
-                color: rgb(15, 86, 86);
-                padding: 0.75rem;
-                height: 30rem;
+                @extend .grid-PuntaDelDiablo;
             }
-
-
             .foto3 {
                 size: 5cm;
                 height: 5cm;
@@ -228,22 +173,9 @@
                 object-fit: cover;
             }
         }
-
-
         .grid-AguasDulces {
-            grid-area: AD;
-            display: flex;
-            flex-direction: column;
-            padding: 1.25rem;
-            text-align: center;
-            background-color: rgba(15, 255, 255, 0.782);
-            align-items: center;
-            justify-content: center;
-            color: rgb(15, 86, 86);
-            padding: 0.75rem;
-            height: 30rem;
+            @include lugarDeRocha (AD);
         }
-
         .foto4 {
             size: 5cm;
             height: 5cm;
@@ -252,7 +184,6 @@
             object-fit: cover;
         }
     }
-
     footer {
         background-color: aqua;
         display: flex;
@@ -262,34 +193,10 @@
 
 
 
-/*ACTIVIDADES*/
 
 
-.AlbumFotosActividades {
-
-    display: grid;
-    grid-template-columns: 100px 100px 100px 100px;
-    grid-template-columns: repeat(4, 1fr);
-    justify-content: center;
-    align-items: center;
-    padding: 0;
-    margin: 0;
-
-}
-
-
-
-.pie {
-    background-color: aqua;
-}
 
 /* IMPERDIBLE */
-
-* {
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-}
 
 .logo {
     width: 8%;
@@ -424,7 +331,24 @@
 }
 
 
+
+
+
+
+
 /* ACTIVIDADES */
+
+.AlbumFotosActividades {
+
+    display: grid;
+    grid-template-columns: 100px 100px 100px 100px;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+
+}
 
 
 * {
@@ -561,13 +485,17 @@
 }
 
 
+
+
+
+
+
+
+
+
+
 /* CONTACTO */
 
-* {
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-}
 
 .logo {
     width: 8%;
@@ -660,9 +588,5 @@
 }
 
 .btn {
-    right: 0%;
-}
-
-.videoYT {
     right: 0%;
 }

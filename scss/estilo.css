@@ -1,6 +1,7 @@
 /*Colores*/
 /*Medidas*/
-/*fuentes*/
+/* Fuentes*/
+/*Mapa de Variables*/
 /*ACTIVIDADES QUERI*/
 @import url("https://fonts.googleapis.com/css2?family=Splash&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation&display=swap");
@@ -34,7 +35,10 @@
   }
 }
 /* INDEX 10 */
-/*LUGARES 78 */
+/* LUGARES 83 */
+/* IMPERDIBLE 223 */
+/* ACTIVIDADES 369 */
+/* CONTACTO 525 */
 /* INDEX */
 * {
   margin: 0;
@@ -47,6 +51,8 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  margin: 100;
+  padding: 100;
 }
 .cuerpoIndex header .tituloIndex {
   font-family: "Splash", cursive;
@@ -64,7 +70,7 @@
   align-items: center;
   justify-content: center;
   width: 310px;
-  height: 390px;
+  height: 500px;
   border: solid 0, 5px rgb(179, 151, 126);
   background-color: rgba(255, 218, 185, 0.651);
   font-family: "Edu NSW ACT Foundation", cursive;
@@ -75,20 +81,21 @@
   color: rgb(92, 71, 22);
 }
 .cuerpoIndex main div .imagen {
-  width: 400px;
-  height: 390px;
+  width: 800px;
+  height: 500px, 2;
 }
 .cuerpoIndex .pieIndex {
-  background-color: rgba(255, 235, 205, 0.655);
+  background-color: rgba(255, 218, 185, 0.651);
   margin: 0;
   padding: 0;
 }
 
 /* LUGARES */
-* {
-  margin: 0px;
-  padding: 0px;
-  box-sizing: border-box;
+.tituloLugares {
+  color: rgb(10, 5, 80);
+  font-family: "Splash", cursive;
+  font-size: xx-large;
+  text-align: left;
 }
 
 .cuerpoLugares {
@@ -98,23 +105,6 @@
   background-size: cover;
   margin: 100;
   padding: 100;
-}
-.cuerpoLugares header h1 {
-  font-family: "Splash", cursive;
-  color: rgb(16, 23, 114);
-  font-size: xx-large;
-  text-align: center;
-  display: inline-block;
-  position: static;
-  bottom: 3rem;
-  left: 30rem;
-  justify-content: flex-start;
-  align-items: center;
-}
-.cuerpoLugares header h1 a img {
-  width: 8%;
-  position: relative;
-  left: 90%;
 }
 .cuerpoLugares .PrincipalLugares h2 {
   font-family: "Edu QLD Beginner", cursive;
@@ -135,7 +125,7 @@
   width: 90%;
   margin: 0 auto;
 }
-.cuerpoLugares .PrincipalLugares .grid-Lugares .grid-PuntaDelDiablo {
+.cuerpoLugares .PrincipalLugares .grid-Lugares .grid-PuntaDelDiablo, .cuerpoLugares .PrincipalLugares .grid-Lugares .grid-LaPaloma, .cuerpoLugares .PrincipalLugares .grid-Lugares .grid-CaboPolonio {
   grid-area: PDD;
   display: flex;
   flex-direction: column;
@@ -165,14 +155,6 @@
 }
 .cuerpoLugares .PrincipalLugares .grid-Lugares .grid-CaboPolonio {
   grid-area: CP;
-  display: flex;
-  flex-direction: column;
-  padding: 1.25rem;
-  text-align: center;
-  background-color: rgba(15, 255, 255, 0.782);
-  align-items: center;
-  justify-content: center;
-  color: rgb(15, 86, 86);
 }
 .cuerpoLugares .PrincipalLugares .grid-Lugares .flex-internoL {
   padding: 0.75rem;
@@ -193,16 +175,6 @@
 }
 .cuerpoLugares .PrincipalLugares .grid-Lugares .grid-LaPaloma {
   grid-area: LP;
-  display: flex;
-  flex-direction: column;
-  padding: 1.25rem;
-  text-align: center;
-  background-color: rgba(15, 255, 255, 0.782);
-  align-items: center;
-  justify-content: center;
-  color: rgb(15, 86, 86);
-  padding: 0.75rem;
-  height: 30rem;
 }
 .cuerpoLugares .PrincipalLugares .grid-Lugares .foto3 {
   size: 5cm;
@@ -213,7 +185,6 @@
      object-fit: cover;
 }
 .cuerpoLugares .PrincipalLugares .grid-AguasDulces {
-  grid-area: AD;
   display: flex;
   flex-direction: column;
   padding: 1.25rem;
@@ -224,6 +195,7 @@
   color: rgb(15, 86, 86);
   padding: 0.75rem;
   height: 30rem;
+  grid-area: AD;
 }
 .cuerpoLugares .PrincipalLugares .foto4 {
   size: 5cm;
@@ -239,28 +211,7 @@
   flex-direction: row;
 }
 
-/*ACTIVIDADES*/
-.AlbumFotosActividades {
-  display: grid;
-  grid-template-columns: 100px 100px 100px 100px;
-  grid-template-columns: repeat(4, 1fr);
-  justify-content: center;
-  align-items: center;
-  padding: 0;
-  margin: 0;
-}
-
-.pie {
-  background-color: aqua;
-}
-
 /* IMPERDIBLE */
-* {
-  margin: 0px;
-  padding: 0px;
-  box-sizing: border-box;
-}
-
 .logo {
   width: 8%;
   position: relative;
@@ -384,6 +335,16 @@
 }
 
 /* ACTIVIDADES */
+.AlbumFotosActividades {
+  display: grid;
+  grid-template-columns: 100px 100px 100px 100px;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
 * {
   margin: 0px;
   padding: 0px;
@@ -511,12 +472,6 @@
 }
 
 /* CONTACTO */
-* {
-  margin: 0px;
-  padding: 0px;
-  box-sizing: border-box;
-}
-
 .logo {
   width: 8%;
   position: relative;
@@ -597,9 +552,5 @@
 }
 
 .btn {
-  right: 0%;
-}
-
-.videoYT {
   right: 0%;
 }/*# sourceMappingURL=estilo.css.map */
