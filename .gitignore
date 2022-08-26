@@ -1,1 +1,58 @@
 /node_modules
+
+/*
+      
+
+        .foto1 {
+    size: 5cm;
+    height: 5cm;
+    width: 310px;
+}
+
+.foto2 {
+    size: 5cm;
+    height: 5cm;
+    width: 310px;
+}
+
+.foto3 {
+    size: 5cm;
+    height: 5cm;
+    width: 310px;
+}
+
+.foto4 {
+    size: 5cm;
+    height: 5cm;
+    width: 310px;
+}
+        */
+
+
+        /*ACTIVIDADES */
+
+
+
+.foto1 {
+    size: 5cm;
+    height: 5cm;
+    width: 310px;
+}
+
+.foto2 {
+    size: 5cm;
+    height: 5cm;
+    width: 310px;
+}
+
+.foto3 {
+    size: 5cm;
+    height: 5cm;
+    width: 310px;
+}
+
+.foto4 {
+    size: 5cm;
+    height: 5cm;
+    width: 310px;
+}

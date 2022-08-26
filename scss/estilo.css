@@ -2,43 +2,77 @@
 /*Medidas*/
 /* Fuentes*/
 /*Mapa de Variables*/
-/*ACTIVIDADES QUERI*/
+/*MEDIAS QUERI*/
+/*LUGARES*/
 @import url("https://fonts.googleapis.com/css2?family=Splash&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation&display=swap");
-@media screen and (max-width: 768px) {
-  .grid-Lugares {
-    grid-template-areas: "PDD" "CP" "LP" "AD";
-    width: 74vw;
-    grid-template-columns: 15rem 15rem;
-  }
-  .grid-Lugares h2 {
+@media (min-width: 568px) and (max-width: 800px) {
+  .cuerpoLugares .PrincipalLugares h2 {
     color: rgb(8, 8, 8);
   }
+  .cuerpoLugares .PrincipalLugares .grid-Lugares {
+    grid-template-areas: "PDD" "CP" "LP" "AD";
+    width: 74vw;
+    grid-template-rows: 15rem 15rem;
+  }
 }
-@media screen and (max-width: 567px) {
-  .grid-Lugares {
+@media (max-width: 567px) {
+  .cuerpoLugares .PrincipalLugares h2 {
+    color: rgb(255, 255, 255);
+  }
+  .cuerpoLugares .PrincipalLugares .grid-Lugares {
     grid-template-areas: "PDD" "CP" "LP" "AD";
     width: 70vw;
     grid-template-columns: 23rem;
   }
-  .grid-Lugares h2 {
-    color: rgb(15, 12, 12);
+}
+/*ACTIVIDADES*/
+@media (min-width: 568px) and (max-width: 800px) {
+  .CuerpoActividades .PrincipalActividades h2 {
+    color: rgb(255, 255, 255);
   }
-  .cabeceraMenuUl {
-    width: 50vw;
-  }
-  .cabeceraLI {
-    width: 50vw;
-  }
-  .cabeceraLink {
-    width: 50vw;
+  .CuerpoActividades .PrincipalActividades .grid-actividades {
+    grid-template-areas: "Surf" "Caminata" "Camion";
+    width: 74vw;
+    grid-template-columns: 15rem;
   }
 }
-/* INDEX 10 */
-/* LUGARES 83 */
-/* IMPERDIBLE 223 */
-/* ACTIVIDADES 369 */
-/* CONTACTO 525 */
+@media (max-width: 567px) {
+  .CuerpoActividades .PrincipalActividades h2 {
+    color: rgb(255, 255, 255);
+  }
+  .CuerpoActividades .PrincipalActividades .grid-actividades {
+    grid-template-areas: "Surf" "Caminata" "Camion";
+    width: 70vw;
+    grid-template-columns: 23rem;
+  }
+}
+/*IMPERDIBLES*/
+@media screen and (min-width: 568px) and (max-width: 800px) {
+  .CuerpoImperdible .PrincipalImperdible .titulo2imperdible {
+    color: rgb(255, 255, 255);
+  }
+  .CuerpoImperdible .PrincipalImperdible .grid-imperdibles {
+    grid-template-areas: "carnaval" "naufragio" "butia" "cerro ";
+    width: 74vw;
+    grid-template-columns: 15rem 15rem;
+  }
+}
+@media screen and (max-width: 567px) {
+  .CuerpoImperdible .PrincipalImperdible .titulo2imperdible {
+    color: rgb(230, 220, 220);
+  }
+  .CuerpoImperdible .PrincipalImperdible .grid-imperdibles {
+    grid-template-areas: "carnaval" "naufragio" "butia" "cerro";
+    width: 70vw;
+    grid-template-columns: 23rem;
+  }
+}
+/* INDEX 15 */
+/* LUGARES 87 */
+/* IMPERDIBLE 207 */
+/* ACTIVIDADES 349 */
+/* CONTACTO 492 */
 /* INDEX */
 * {
   margin: 0;
@@ -59,6 +93,8 @@
   font-size: xx-large;
   text-align: left;
   color: rgb(80, 76, 43);
+  font-size: 100px;
+  font-weight: 1400;
 }
 .cuerpoIndex header nav a .logo {
   width: 8%;
@@ -69,12 +105,12 @@
   text-align: center;
   align-items: center;
   justify-content: center;
-  width: 310px;
-  height: 500px;
+  width: 620px;
+  height: 600px;
   border: solid 0, 5px rgb(179, 151, 126);
   background-color: rgba(255, 218, 185, 0.651);
   font-family: "Edu NSW ACT Foundation", cursive;
-  font-size: 15;
+  font-size: 30px;
   font-style: oblique;
   font-weight: bolder;
   text-align: center;
@@ -82,20 +118,33 @@
 }
 .cuerpoIndex main div .imagen {
   width: 800px;
-  height: 500px, 2;
+  height: 600px, 2;
 }
 .cuerpoIndex .pieIndex {
   background-color: rgba(255, 218, 185, 0.651);
   margin: 0;
   padding: 0;
 }
+.cuerpoIndex .pieIndex .direccion {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  border: solid 0, 5px rgb(179, 151, 126);
+  font-family: "Edu NSW ACT Foundation", cursive;
+  font-size: 30px;
+  font-style: oblique;
+  text-align: center;
+  color: rgb(92, 71, 22);
+}
 
+/*---------------------------------------------------------*/
 /* LUGARES */
 .tituloLugares {
   color: rgb(10, 5, 80);
   font-family: "Splash", cursive;
   font-size: xx-large;
   text-align: left;
+  font-size: 40px;
 }
 
 .cuerpoLugares {
@@ -103,13 +152,11 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  margin: 100;
-  padding: 100;
 }
 .cuerpoLugares .PrincipalLugares h2 {
   font-family: "Edu QLD Beginner", cursive;
   color: rgb(12, 35, 69);
-  font-size: medium;
+  font-size: larger;
   text-align: center;
   left: 30rem;
   justify-content: flex-start;
@@ -118,37 +165,37 @@
 .cuerpoLugares .PrincipalLugares .grid-Lugares {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: auto;
   -moz-column-gap: 5px;
        column-gap: 5px;
-  grid-template-areas: "PDD CP LP AD ";
-  width: 90%;
+  grid-template-areas: "PDD" "CP" "LP" "AD";
+  width: 100%;
   margin: 0 auto;
 }
 .cuerpoLugares .PrincipalLugares .grid-Lugares .grid-PuntaDelDiablo, .cuerpoLugares .PrincipalLugares .grid-Lugares .grid-LaPaloma, .cuerpoLugares .PrincipalLugares .grid-Lugares .grid-CaboPolonio {
   grid-area: PDD;
   display: flex;
   flex-direction: column;
-  padding: 1.25rem;
+  padding: 50 rem;
   text-align: center;
   background-color: rgba(15, 255, 255, 0.782);
   align-items: center;
   justify-content: center;
   color: rgb(15, 86, 86);
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
 }
 .cuerpoLugares .PrincipalLugares .grid-Lugares .flex-internoL {
   padding: 0.75rem;
   height: 30rem;
 }
-.cuerpoLugares .PrincipalLugares .grid-Lugares .foto1 {
-  size: 5cm;
+.cuerpoLugares .PrincipalLugares .grid-Lugares .foto1L {
   height: 5cm;
   width: 9cm;
-  width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.cuerpoLugares .PrincipalLugares .grid-Lugares .foto1 .flex-internoL img {
+.cuerpoLugares .PrincipalLugares .grid-Lugares .foto1L .flex-internoL img {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -160,23 +207,16 @@
   padding: 0.75rem;
   height: 30rem;
 }
-.cuerpoLugares .PrincipalLugares .grid-Lugares .foto2 {
-  size: 5cm;
+.cuerpoLugares .PrincipalLugares .grid-Lugares .foto2L {
   height: 5cm;
   width: 9cm;
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-.cuerpoLugares .PrincipalLugares .grid-Lugares .foto2 .flex-internoL {
-  width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 .cuerpoLugares .PrincipalLugares .grid-Lugares .grid-LaPaloma {
   grid-area: LP;
 }
-.cuerpoLugares .PrincipalLugares .grid-Lugares .foto3 {
+.cuerpoLugares .PrincipalLugares .grid-Lugares .foto3L {
   size: 5cm;
   height: 5cm;
   width: 9cm;
@@ -197,7 +237,7 @@
   height: 30rem;
   grid-area: AD;
 }
-.cuerpoLugares .PrincipalLugares .foto4 {
+.cuerpoLugares .PrincipalLugares .foto4L {
   size: 5cm;
   height: 5cm;
   width: 9cm;
@@ -205,29 +245,24 @@
   -o-object-fit: cover;
      object-fit: cover;
 }
-.cuerpoLugares footer {
-  background-color: aqua;
-  display: flex;
-  flex-direction: row;
+.cuerpoLugares .PrincipalLugares .foto4L .flex-internoL img {
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
+/*---------------------------------------------------------*/
 /* IMPERDIBLE */
+.tituloImperdible {
+  font-family: "Splash", cursive;
+  color: rgb(240, 149, 21);
+  font-size: 40px;
+  font-weight: 100;
+}
+
 .logo {
   width: 8%;
   position: relative;
   left: 90%;
-}
-
-.tituloImperdible {
-  font-family: "Splash", cursive;
-  color: rgb(240, 149, 21);
-}
-
-.titulo2imperdible {
-  font-family: "Edu QLD Beginner", cursive;
-  color: rgb(173, 231, 37);
-  font-size: medium;
-  text-align: center;
 }
 
 .CuerpoImperdible {
@@ -236,35 +271,47 @@
   background-position: center;
   background-size: cover;
 }
-
-.grid-imperdibles {
+.CuerpoImperdible .titulo2imperdible {
+  font-family: "Edu QLD Beginner", cursive;
+  color: rgb(173, 231, 37);
+  font-size: larger;
+  text-align: center;
+}
+.CuerpoImperdible .PrincipalImperdible .grid-imperdibles {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: auto;
   -moz-column-gap: 5px;
        column-gap: 5px;
-  grid-template-areas: "carnaval naufragio butia cerro ";
+  grid-template-areas: "carnaval" "naufragio" "butia" "cerro";
   width: 90%;
   margin: 0 auto;
 }
-
-.grid-carnaval {
+.CuerpoImperdible .PrincipalImperdible .grid-imperdibles .grid-carnaval {
   grid-area: carnaval;
+  display: flex;
+  flex-direction: column;
+  padding: 1.25rem;
+  text-align: center;
+  color: rgb(248, 251, 250);
+  background-color: rgba(13, 68, 116, 0.785);
+  align-items: center;
 }
-
-.grid-naufragios {
+.CuerpoImperdible .PrincipalImperdible .grid-imperdibles .grid-carnaval .flex-internoI p {
+  padding: 0.75rem;
+  height: 10rem;
+}
+.CuerpoImperdible .PrincipalImperdible .grid-imperdibles .grid-carnaval .foto1I {
+  size: 3cm;
+  height: 5cm;
+  width: 310px;
+}
+.CuerpoImperdible .PrincipalImperdible .grid-imperdibles .grid-carnaval .foto1I .flex-internoI img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.CuerpoImperdible .PrincipalImperdible .grid-imperdibles .grid-naufragios {
   grid-area: naufragio;
-}
-
-.grid-butia {
-  grid-area: butia;
-}
-
-.grid-cerro {
-  grid-area: cerro;
-}
-
-.flex-interno {
   display: flex;
   flex-direction: column;
   padding: 1.25rem;
@@ -274,100 +321,79 @@
   align-items: center;
   justify-content: center;
 }
-
-.flex-interno p {
+.CuerpoImperdible .PrincipalImperdible .grid-imperdibles .grid-naufragios p {
   padding: 0.75rem;
   height: 30rem;
 }
-
-.flex-interno img {
-  width: 100%;
+.CuerpoImperdible .PrincipalImperdible .grid-imperdibles .grid-naufragios .foto2I {
+  size: 3cm;
+  height: 5cm;
+  width: 310px;
+}
+.CuerpoImperdible .PrincipalImperdible .grid-imperdibles .grid-naufragios .foto2I .flex-internoI img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.CuerpoImperdible .PrincipalImperdible .grid-imperdibles .grid-butia {
+  grid-area: butia;
+  display: flex;
+  flex-direction: column;
+  padding: 1.25rem;
+  text-align: center;
+  color: rgb(248, 251, 250);
+  background-color: rgba(13, 68, 116, 0.785);
+  align-items: center;
+  justify-content: center;
+}
+.CuerpoImperdible .PrincipalImperdible .grid-imperdibles .grid-butia p {
+  padding: 0.75rem;
+  height: 30rem;
+}
+.CuerpoImperdible .PrincipalImperdible .grid-imperdibles .grid-butia .foto3I {
+  size: 3cm;
+  height: 5cm;
+  width: 310px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.CuerpoImperdible .PrincipalImperdible .grid-imperdibles .grid-butia .foto3I .flex-internoI img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.CuerpoImperdible .PrincipalImperdible .grid-imperdibles .grid-cerro {
+  grid-area: cerro;
+  display: flex;
+  flex-direction: column;
+  padding: 1.25rem;
+  text-align: center;
+  color: rgb(248, 251, 250);
+  background-color: rgba(13, 68, 116, 0.785);
+  align-items: center;
+  justify-content: center;
+}
+.CuerpoImperdible .PrincipalImperdible .grid-imperdibles .grid-cerro p {
+  padding: 0.75rem;
+  height: 30rem;
+}
+.CuerpoImperdible .PrincipalImperdible .grid-imperdibles .grid-cerro .foto4I {
+  size: 3cm;
+  height: 5cm;
+  width: 310px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.CuerpoImperdible .PrincipalImperdible .grid-imperdibles .grid-cerro .foto4I .flex-internoI img {
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-@media screen and (max-width: 768px) {
-  .grid-imperdibles {
-    grid-template-areas: "carnaval naufragio" "butia" "cerro ";
-    width: 74vw;
-    grid-template-columns: 15rem 15rem;
-  }
-  .grid-imperdibles h2 {
-    color: rgb(94, 18, 156);
-  }
-}
-@media screen and (max-width: 567px) {
-  .grid-imperdibles {
-    grid-template-areas: "carnaval" "naufragio" "butia" "cerro";
-    width: 70vw;
-    grid-template-columns: 23rem;
-  }
-  .grid-imperdibles h2 {
-    color: rgb(230, 220, 220);
-  }
-}
-.foto1 {
-  size: 3cm;
-  height: 5cm;
-  width: 310px;
-}
-
-.foto2 {
-  size: 3cm;
-  height: 5cm;
-  width: 310px;
-}
-
-.foto3 {
-  size: 3cm;
-  height: 5cm;
-  width: 310px;
-}
-
-.foto4 {
-  size: 3cm;
-  height: 5cm;
-  width: 310px;
-}
-
-.pie {
-  background-color: aqua;
-}
-
+/*---------------------------------------------------------*/
 /* ACTIVIDADES */
-.AlbumFotosActividades {
-  display: grid;
-  grid-template-columns: 100px 100px 100px 100px;
-  grid-template-columns: repeat(4, 1fr);
-  justify-content: center;
-  align-items: center;
-  padding: 0;
-  margin: 0;
-}
-
-* {
-  margin: 0px;
-  padding: 0px;
-  box-sizing: border-box;
-}
-
-.logo {
-  width: 8%;
-  position: relative;
-  left: 90%;
-}
-
 .tituloActividades {
   font-family: "Splash", cursive;
-  color: rgb(75, 76, 97);
-  font-size: xx-large;
-}
-
-.titulo2actividades {
-  font-family: "Edu QLD Beginner", cursive;
   color: rgba(48, 48, 49, 0.986);
-  font-size: medium;
-  text-align: center;
+  text-align: left;
+  font-size: 40px;
 }
 
 .CuerpoActividades {
@@ -376,11 +402,23 @@
   background-position: center;
   background-size: cover;
 }
-
-/*CORREGIR*/
-.grid-actividades {
+.CuerpoActividades .titulo2Actividades {
+  font-family: "Splash", cursive;
+  color: rgb(75, 76, 97);
+  font-size: xx-large;
+}
+.CuerpoActividades .PrincipalActividades h2 {
+  font-family: "Edu QLD Beginner", cursive;
+  color: rgb(12, 35, 69);
+  font-size: larger;
+  text-align: center;
+  left: 30rem;
+  justify-content: flex-start;
+  align-items: center;
+}
+.CuerpoActividades .PrincipalActividades .grid-actividades {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
   grid-template-rows: auto;
   -moz-column-gap: 5px;
        column-gap: 5px;
@@ -388,20 +426,8 @@
   width: 90%;
   margin: 0 auto;
 }
-
-.grid-Surf {
+.CuerpoActividades .PrincipalActividades .grid-actividades .grid-Surf {
   grid-area: Surf;
-}
-
-.grid-Caminata {
-  grid-area: Caminata;
-}
-
-.grid-Camion {
-  grid-area: Camion;
-}
-
-.flex-internoA {
   display: flex;
   flex-direction: column;
   padding: 1.25rem;
@@ -411,66 +437,83 @@
   align-items: center;
   justify-content: center;
 }
-
-.flex-internoA p {
+.CuerpoActividades .PrincipalActividades .grid-actividades .flex-internoA {
   padding: 0.75rem;
   height: 30rem;
 }
-
-.flex-internoA img {
+.CuerpoActividades .PrincipalActividades .grid-actividades .foto1A {
+  size: 5cm;
+  height: 5cm;
+  width: 9cm;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.CuerpoActividades .PrincipalActividades .grid-actividades .foto1A .flex-internoA {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.CuerpoActividades .PrincipalActividades .grid-actividades .grid-Caminata {
+  grid-area: Caminata;
+  display: flex;
+  flex-direction: column;
+  padding: 1.25rem;
+  text-align: center;
+  color: rgb(37, 70, 70);
+  background-color: rgba(28, 155, 198, 0.434);
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem;
+  height: 30rem;
+}
+.CuerpoActividades .PrincipalActividades .grid-actividades .flex-internoA {
+  padding: 0.75rem;
+  height: 30rem;
+}
+.CuerpoActividades .PrincipalActividades .grid-actividades .foto2A {
+  size: 5cm;
+  height: 5cm;
+  width: 9cm;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.CuerpoActividades .PrincipalActividades .grid-actividades .foto2A .flex-internoA {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.CuerpoActividades .PrincipalActividades .grid-actividades .grid-Camion {
+  grid-area: Camion;
+  display: flex;
+  flex-direction: column;
+  padding: 1.25rem;
+  text-align: center;
+  color: rgb(37, 70, 70);
+  background-color: rgba(28, 155, 198, 0.434);
+  align-items: center;
+  justify-content: center;
+}
+.CuerpoActividades .PrincipalActividades .grid-actividades .flex-internoA {
+  padding: 0.75rem;
+  height: 30rem;
+}
+.CuerpoActividades .PrincipalActividades .grid-actividades .foto3A {
+  size: 5cm;
+  height: 5cm;
+  width: 9cm;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.CuerpoActividades .PrincipalActividades .grid-actividades .foto3A .flex-internoA {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-@media screen and (max-width: 768px) {
-  .grid-actividades {
-    grid-template-areas: "Surf" "Caminata" "Camion";
-    width: 74vw;
-    grid-template-columns: 15rem 15rem;
-  }
-  .grid-actividades h2 {
-    color: rgb(94, 18, 156);
-  }
-}
-@media screen and (max-width: 567px) {
-  .grid-actividades {
-    grid-template-areas: "Surf" "Caminata" "Camion";
-    width: 70vw;
-    grid-template-columns: 23rem;
-  }
-  .grid-actividades h2 {
-    color: red;
-  }
-}
-.foto1 {
-  size: 5cm;
-  height: 5cm;
-  width: 310px;
-}
-
-.foto2 {
-  size: 5cm;
-  height: 5cm;
-  width: 310px;
-}
-
-.foto3 {
-  size: 5cm;
-  height: 5cm;
-  width: 310px;
-}
-
-.foto4 {
-  size: 5cm;
-  height: 5cm;
-  width: 310px;
-}
-
-.pie {
-  background-color: aqua;
-}
-
+/*---------------------------------------------------------*/
 /* CONTACTO */
 .logo {
   width: 8%;
@@ -482,10 +525,11 @@
   font-family: "Splash", cursive;
   color: rgba(245, 222, 22, 0.815);
   font-size: xx-large;
-  text-align: center;
+  text-align: left;
   position: relative;
   padding: 0;
   margin: 0;
+  font-size: 40px;
 }
 
 .titulocontacto2 {
@@ -522,10 +566,6 @@
   background-size: cover;
   margin: 0;
   padding: 0;
-}
-
-.pieContacto {
-  background-color: midnightblue;
 }
 
 .titulo2contacto {
