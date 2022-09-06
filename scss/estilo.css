@@ -6,68 +6,9 @@
 /*LUGARES*/
 @import url("https://fonts.googleapis.com/css2?family=Splash&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation&display=swap");
-@media (min-width: 568px) and (max-width: 800px) {
-  .cuerpoLugares .PrincipalLugares h2 {
-    color: rgb(8, 8, 8);
-  }
-  .cuerpoLugares .PrincipalLugares .grid-Lugares {
-    grid-template-areas: "PDD" "CP" "LP" "AD";
-    width: 74vw;
-    grid-template-rows: 15rem 15rem;
-  }
-}
-@media (max-width: 567px) {
-  .cuerpoLugares .PrincipalLugares h2 {
-    color: rgb(255, 255, 255);
-  }
-  .cuerpoLugares .PrincipalLugares .grid-Lugares {
-    grid-template-areas: "PDD" "CP" "LP" "AD";
-    width: 70vw;
-    grid-template-columns: 23rem;
-  }
-}
-/*ACTIVIDADES*/
-@media (min-width: 568px) and (max-width: 800px) {
-  .CuerpoActividades .PrincipalActividades h2 {
-    color: rgb(255, 255, 255);
-  }
-  .CuerpoActividades .PrincipalActividades .grid-actividades {
-    grid-template-areas: "Surf" "Caminata" "Camion";
-    width: 74vw;
-    grid-template-columns: 15rem;
-  }
-}
-@media (max-width: 567px) {
-  .CuerpoActividades .PrincipalActividades h2 {
-    color: rgb(255, 255, 255);
-  }
-  .CuerpoActividades .PrincipalActividades .grid-actividades {
-    grid-template-areas: "Surf" "Caminata" "Camion";
-    width: 70vw;
-    grid-template-columns: 23rem;
-  }
-}
-/*IMPERDIBLES*/
-@media screen and (min-width: 568px) and (max-width: 800px) {
-  .CuerpoImperdible .PrincipalImperdible .titulo2imperdible {
-    color: rgb(255, 255, 255);
-  }
-  .CuerpoImperdible .PrincipalImperdible .grid-imperdibles {
-    grid-template-areas: "carnaval" "naufragio" "butia" "cerro ";
-    width: 74vw;
-    grid-template-columns: 15rem 15rem;
-  }
-}
-@media screen and (max-width: 567px) {
-  .CuerpoImperdible .PrincipalImperdible .titulo2imperdible {
-    color: rgb(230, 220, 220);
-  }
-  .CuerpoImperdible .PrincipalImperdible .grid-imperdibles {
-    grid-template-areas: "carnaval" "naufragio" "butia" "cerro";
-    width: 70vw;
-    grid-template-columns: 23rem;
-  }
-}
+
+
+
 /* INDEX 15 */
 /* LUGARES 87 */
 /* IMPERDIBLE 207 */
@@ -90,23 +31,17 @@
 }
 .cuerpoIndex header .tituloIndex {
   font-family: "Splash", cursive;
-  font-size: xx-large;
   text-align: left;
   color: rgb(80, 76, 43);
-  font-size: 100px;
+  font-size: 4rem;
   font-weight: 1400;
 }
-.cuerpoIndex header nav a .logo {
-  width: 8%;
-  margin: 0;
-  right: 0;
-}
+
 .cuerpoIndex main div .Presentacion {
   text-align: center;
   align-items: center;
   justify-content: center;
-  width: 620px;
-  height: 600px;
+  width: 60%;
   border: solid 0, 5px rgb(179, 151, 126);
   background-color: rgba(255, 218, 185, 0.651);
   font-family: "Edu NSW ACT Foundation", cursive;
@@ -119,6 +54,16 @@
 .cuerpoIndex main div .imagen {
   width: 800px;
   height: 600px, 2;
+}
+.logo{
+  width:50%;
+}
+.imagenFaro{
+  width:80%;
+}
+.mapa{
+  width: 80%;
+  height: 80%;
 }
 .cuerpoIndex .pieIndex {
   background-color: rgba(255, 218, 185, 0.651);
@@ -257,12 +202,6 @@
   color: rgb(240, 149, 21);
   font-size: 40px;
   font-weight: 100;
-}
-
-.logo {
-  width: 8%;
-  position: relative;
-  left: 90%;
 }
 
 .CuerpoImperdible {
@@ -515,11 +454,6 @@
 
 /*---------------------------------------------------------*/
 /* CONTACTO */
-.logo {
-  width: 8%;
-  position: relative;
-  left: 90%;
-}
 
 .titulo1 {
   font-family: "Splash", cursive;
@@ -594,3 +528,71 @@
 .btn {
   right: 0%;
 }/*# sourceMappingURL=estilo.css.map */
+
+@media screen and (min-width: 568px) and (max-width: 800px) {
+  .cuerpoLugares .PrincipalLugares h2 {
+    color: rgb(8, 8, 8);
+  }
+  .cuerpoLugares .PrincipalLugares .grid-Lugares {
+    grid-template-areas: "PDD" "CP" "LP" "AD";
+    width: 74vw;
+    grid-template-rows: 15rem 15rem;
+  }
+  .CuerpoActividades .PrincipalActividades h2 {
+    color: rgb(255, 255, 255);
+  }
+  .CuerpoActividades .PrincipalActividades .grid-actividades {
+    grid-template-areas: "Surf" "Caminata" "Camion";
+    width: 74vw;
+    grid-template-columns: 15rem;
+  }
+  .CuerpoImperdible .PrincipalImperdible .titulo2imperdible {
+    color: rgb(255, 255, 255);
+  }
+  .CuerpoImperdible .PrincipalImperdible .grid-imperdibles {
+    grid-template-areas: "carnaval" "naufragio" "butia" "cerro ";
+    width: 74vw;
+    grid-template-columns: 15rem 15rem;
+  }
+}
+@media screen and (max-width: 567px) {
+  .cuerpoLugares .PrincipalLugares h2 {
+    color: rgb(255, 255, 255);
+  }
+  .cuerpoLugares .PrincipalLugares .grid-Lugares {
+    grid-template-areas: "PDD" "CP" "LP" "AD";
+    width: 70vw;
+    grid-template-columns: 23rem;
+  }
+  .CuerpoActividades .PrincipalActividades h2 {
+    color: rgb(255, 255, 255);
+  }
+  .CuerpoActividades .PrincipalActividades .grid-actividades {
+    grid-template-areas: "Surf" "Caminata" "Camion";
+    width: 70vw;
+    grid-template-columns: 23rem;
+  }
+  .CuerpoImperdible .PrincipalImperdible .titulo2imperdible {
+    color: rgb(230, 220, 220);
+  }
+  .CuerpoImperdible .PrincipalImperdible .grid-imperdibles {
+    grid-template-areas: "carnaval" "naufragio" "butia" "cerro";
+    width: 70vw;
+    grid-template-columns: 23rem;
+  }
+  .cuerpoIndex main div .Presentacion {
+    width: 100%;
+    font-size: 1.5rem;
+  }
+  .imagenFaro{
+    width:100%;
+  }
+  .mapa{
+    width: 100%;
+    height:100%;
+  }
+  .cuerpoIndex header .tituloIndex {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+}
